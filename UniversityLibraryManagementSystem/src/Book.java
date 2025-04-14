@@ -28,7 +28,6 @@ public class Book {
     public void setName(String name) {
         this.name = name;
     }
-    
 
     public void setAuthor(Author author) {
         this.author = author;
@@ -46,9 +45,12 @@ public class Book {
         this.location = location;
     }
 
-    // Getters
-    public int getISBN() {
-        return ISBN;
+    public void setBorrowList(ArrayList<Borrow> borrowList) {
+        this.borrowList = borrowList;
+    }
+
+    public ArrayList<Borrow> getBorrowList() {
+        return borrowList;
     }
 
     public String getName() {
