@@ -13,6 +13,11 @@ public class Student extends User{
         this.borrowList = new ArrayList<Borrow>();
     }
     
+    public Student(String name, String email, String password, String role, Status status, ArrayList<Borrow> borrowList) {
+        super(name, email, password, role, status);
+        this.borrowList = borrowList;
+    }
+    
     public void setBorrowList(ArrayList<Borrow> borrowList) {
         this.borrowList = borrowList;
     }
