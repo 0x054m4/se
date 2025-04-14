@@ -144,7 +144,7 @@ public class Borrow {
        
     }
 
-    public void removeBorrow(){
+    public void removeBorrow() throws SQLException{
         String sql = "DELETE FROM Borrow WHERE borrowID = " + borrowID;
         Statement statement = connection.createStatement();
         statement.executeUpdate(sql);
