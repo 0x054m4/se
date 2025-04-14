@@ -118,27 +118,27 @@ public class Borrow {
     }
 
     // DB operations
-    public void addBorrow() {
+    public void addBorrow() throws SQLException {
         String sql = "INSERT INTO Borrow (borrowDate, dueDate, returnDate, status, maxAmount, studentID, bookID) VALUES ('"
             + new java.sql.Date(borrowDate.getTime()) + "', '"
             + new java.sql.Date(dueDate.getTime()) + "', '"
             + (returnDate != null ? new java.sql.Date(returnDate.getTime()) : null) + "', '"
             + status + "', "
             + maxAmount + ", "
-            + student.getStudentID() + ", "
-            + book.getBookID() + ")";
+            + student.getUserID() + ", "
+            + book.getISBN() + ")";
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
      
     }
-    public void updateBorrow(){
+    public void updateBorrow() throws SQLException{
         String sql = "UPDATE Borrow SET borrowDate = '" + new java.sql.Date(borrowDate.getTime()) + "', dueDate = '"
             + new java.sql.Date(dueDate.getTime()) + "', returnDate = '"
             + (returnDate != null ? new java.sql.Date(returnDate.getTime()) : null) + "', status = '"
             + status + "', maxAmount = "
             + maxAmount + ", studentID = "
-            + student.getStudentID() + ", bookID = "
-            + book.getBookID() + " WHERE borrowID = " + borrowID;
+            + student.getUserID() + ", bookID = "
+            + book.getISBN() + " WHERE borrowID = " + borrowID;
             Statement statement = connection.createStatement();
             statement.executeUpdate(sql);
        
