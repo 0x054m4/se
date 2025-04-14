@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import UniversityLibraryManagementSystem.Book;
-
 public class Author {
     private String name;
     private String bio;
