@@ -18,7 +18,6 @@ public class Borrow {
     private Connection connection = null;
     private void connect() {
         try {
-            // Optional, but good practice to register the driver
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             connection = DriverManager.getConnection(dbURL);
             System.out.println("Connected successfully to DB.");
@@ -30,6 +29,17 @@ public class Borrow {
             e.printStackTrace();
         }
     }
+    public void closeConnection() {
+        try {
+            if (connection != null && !connection.isClosed()) {
+                connection.close();
+                System.out.println("DB connection closed.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
     public Borrow(int borrowID) {
         this.borrowID = borrowID;
         connect();
@@ -42,7 +52,7 @@ public class Borrow {
         this.student = student;
         connect();
     }
-
+    
     public int getBorrowID() {
         return borrowID;
     }
