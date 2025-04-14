@@ -8,11 +8,6 @@ public class Student extends User{
         this.borrowList = new ArrayList<>();
     }
     
-    public Student(String name, String email, String password, String role, Status status) {
-        super(name, email, password, role, status);
-        this.borrowList = new ArrayList<>();
-    }
-    
     public void setBorrowList(ArrayList<Borrow> borrowList) {
         this.borrowList = borrowList;
     }
