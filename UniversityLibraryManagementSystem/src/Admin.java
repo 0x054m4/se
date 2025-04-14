@@ -7,7 +7,7 @@ public class Admin extends User {
         super(name, email, password, role, status);
     }
     public void generateReport() {
-        // 
+        
         System.out.println("");
         
     }
