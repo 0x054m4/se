@@ -22,24 +22,48 @@ public class Book {
         this.ISBN = ISBN;
     }
 
+    public int getISBN() {
+        return ISBN;
+    }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setAuthor(Author author) {
         this.author = author;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public Status getStatus() {
+        return status;
     }
 
     public void setCategory(String category) {
         this.category = category;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public Location getLocation() {
+        return location;
     }
 
     public void setBorrowList(ArrayList<Borrow> borrowList) {
@@ -50,25 +74,7 @@ public class Book {
         return borrowList;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public Author getAuthor() {
-        return author;
-    }
-
-    public Status getStatus() {
-        return status;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
 
     public void addBook() {
 
