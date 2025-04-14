@@ -16,5 +16,4 @@ public Student(String name, String email, String password, String role, Status s
             System.out.println(b);
         }
     }
-
 }
