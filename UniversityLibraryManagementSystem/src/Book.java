@@ -69,6 +69,7 @@ public class Book {
     public Location getLocation() {
         return location;
     }
+    
 
     public void addBook() {
 
