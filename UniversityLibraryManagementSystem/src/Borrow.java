@@ -1,6 +1,4 @@
-import java.lang.Thread.State;
 import java.sql.Connection;
-import java.sql.Driver;
 import java.util.Date;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -148,7 +146,6 @@ public class Borrow {
         String sql = "DELETE FROM Borrow WHERE borrowID = " + borrowID;
         Statement statement = connection.createStatement();
         statement.executeUpdate(sql);
-        
     }
 
 }
