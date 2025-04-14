@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Student extends User {
+public class Student extends Student {
 
 
 }
