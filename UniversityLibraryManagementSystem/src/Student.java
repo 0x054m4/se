@@ -13,10 +13,11 @@ public class Student extends User{
         this.borrowList = new ArrayList<>();
     }
     
-    public void viewBorrowHistory() {
-        for (Borrow b : borrowList) {
-            System.out.println(b);
-        }
+    public void setBorrowList(ArrayList<Borrow> borrowList) {
+        this.borrowList = borrowList;
     }
 
+    public ArrayList<Borrow> getBorrowList() {
+        return borrowList;
+    }
 }
