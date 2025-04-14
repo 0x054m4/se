@@ -9,7 +9,6 @@ public class Book {
     private Location location;
     private ArrayList<Borrow> borrowList;
 
-    // Constructors
     public Book(int ISBN) {
         this.ISBN = ISBN;
     }
@@ -17,10 +16,8 @@ public class Book {
     public Book(String name, String author, Status status) {
         this.name = name;
         this.status = status;
-        // You might need logic to assign the Author by name
     }
 
-    // Setters
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;
     }
