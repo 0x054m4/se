@@ -75,6 +75,25 @@ public class Book {
     }
 
 
+<<<<<<< HEAD
+    public Author getAuthor() {
+        return author;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+    
+=======
+>>>>>>> 8f8ca10762d670da1b1818812c7a8078589eeff7
 
     public void addBook() {
 
