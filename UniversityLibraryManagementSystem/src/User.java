@@ -70,36 +70,3 @@ public class User {
         ACTIVE, DISABLED
     }
 }
-
-public class Student extends User {
-    
-    public Student(int userID) {
-        super(userID);
-    }
-
-    public Student(String name, String email, String password, Status status) {
-        super(name, email, password, "Student", status);
-    }
-}
-
-public class Admin extends User {
-    
-    public Admin(int userID) {
-        super(userID);
-    }
-
-    public Admin(String name, String email, String password, Status status) {
-        super(name, email, password, "Admin", status);
-    }
-}
-
-public class Librarian extends User {
-    
-    public Librarian(int userID) {
-        super(userID);
-    }
-
-    public Librarian(String name, String email, String password, Status status) {
-        super(name, email, password, "Librarian", status);
-    }
-}
