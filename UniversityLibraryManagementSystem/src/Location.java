@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Location {
     private int locationID;
     private int floor;
