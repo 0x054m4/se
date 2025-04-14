@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 
 public class Book {
     private int ISBN;
@@ -7,6 +7,7 @@ public class Book {
     private Status status;
     private String category;
     private Location location;
+    private ArrayList<Borrow> borrowList;
 
     // Constructors
     public Book(int ISBN) {
@@ -75,6 +76,6 @@ public class Book {
 
     public enum Status {
         ACTIVE,
-        DISABLED 
+        DISABLED
     }
 }
