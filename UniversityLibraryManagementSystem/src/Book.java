@@ -1,6 +1,5 @@
 package UniversityLibraryManagementSystem.src;
 
-import java.util.ArrayList;
 
 public class Book {
     private int ISBN;
@@ -71,8 +70,12 @@ public class Book {
         return location;
     }
 
-    // Other methods
     public void addBook() {
-        // Logic to add book
+
+    }
+
+    public enum Status {
+        ACTIVE,
+        DISABLED 
     }
 }
