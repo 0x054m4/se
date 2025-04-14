@@ -5,7 +5,12 @@ public class Student extends User{
 
     public Student(int userID) {
         super(userID);
-        this.borrowList = new ArrayList<>();
+        this.borrowList = new ArrayList<Borrow>();
+    }
+    
+    public Student(String name, String email, String password, String role, Status status) {
+        super(name, email, password, role, status);
+        this.borrowList = new ArrayList<Borrow>();
     }
     
     public void setBorrowList(ArrayList<Borrow> borrowList) {
