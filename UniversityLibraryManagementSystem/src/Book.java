@@ -1,4 +1,4 @@
-package UniversityLibraryManagementSystem;
+package UniversityLibraryManagementSystem.src;
 
 import java.util.ArrayList;
 
