@@ -11,6 +11,9 @@ public Student(String name, String email, String password, String role, Status s
         super(name, email, password, role, status);
         this.borrowList = new ArrayList<>();
     }
-
-   
+    public void viewBorrowHistory() {
+        for (Borrow b : borrowList) {
+            System.out.println(b);
+        }
+    }
 }
