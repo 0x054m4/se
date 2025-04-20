@@ -6,7 +6,6 @@ public class Author {
     private int id;
     private ArrayList<Book> books;
 
-    // Constructors
     public Author(String name, String bio, ArrayList<Book> books) {
         this.name = name;
         this.bio = bio;
@@ -17,7 +16,6 @@ public class Author {
         this.id = id;
     }
 
-    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -34,7 +32,6 @@ public class Author {
         this.books = books;
     }
 
-    // Getters
     public String getName() {
         return name;
     }
@@ -51,16 +48,15 @@ public class Author {
         return books;
     }
 
-    // Other methods
     public void addAuthor() {
-        // Add author to DB or list
+     
     }
 
     public void updateAuthor() {
-        // Update author info
+
     }
 
     public void deleteAuthor() {
-        // Delete author
+
     }
 }
