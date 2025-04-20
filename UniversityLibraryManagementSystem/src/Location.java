@@ -20,8 +20,6 @@ public class Location {
         this.row = row;
     }
 
-  
-
     public void setLocationID(int locationID) {
         this.locationID = locationID;
     }
