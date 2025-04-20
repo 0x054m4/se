@@ -8,17 +8,19 @@ public class Location {
     private float row;
     private ArrayList<Book> book;
     
-    public Location(int floor, String section, String shelf, float row, ArrayList<Book> book) {
+    public Location(int locationID) {
+        this.locationID = locationID;
+    }
+
+    public Location(int locationID, int floor, String section, String shelf, float row) {
+        this.locationID = locationID;
         this.floor = floor;
         this.section = section;
         this.shelf = shelf;
         this.row = row;
-        this.book = book;
     }
 
-    public Location(int locationID) {
-        this.locationID = locationID;
-    }
+  
 
     public void setLocationID(int locationID) {
         this.locationID = locationID;
