@@ -5,8 +5,9 @@ public class Borrow {
     private Date borrowDate;
     private Date dueDate;
     private Date returnDate;
-    private String status;
-    private double maxAmount;
+    private BorrowStatus status;
+    private int renewalCount;
+    private double fineAmount;
     private Student student;
     private Book book;
     
@@ -14,75 +15,87 @@ public class Borrow {
         this.borrowID = borrowID;
     }
 
-    public Borrow( Date borrowDate, Date dueDate, Book book, Student student) {
+    public Borrow(Date borrowDate, Date dueDate, Date returnDate, BorrowStatus status, int renewalCount, double fineAmount, Book book, Student student) {
         this.borrowDate = borrowDate;
         this.dueDate = dueDate;
+        this.returnDate = returnDate;
+        this.status = status;
+        this.renewalCount = renewalCount;
+        this.fineAmount = fineAmount;
         this.book = book;
         this.student = student;
     }
     
-    public int getBorrowID() {
-        return borrowID;
-    }
-
     public void setBorrowID(int borrowID) {
         this.borrowID = borrowID;
     }
 
-    public Date getBorrowDate() {
-        return borrowDate;
+    public int getBorrowID() {
+        return borrowID;
     }
 
     public void setBorrowDate(Date borrowDate) {
         this.borrowDate = borrowDate;
     }
 
-    public Date getDueDate() {
-        return dueDate;
+    public Date getBorrowDate() {
+        return borrowDate;
     }
 
     public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
     }
 
-    public Date getReturnDate() {
-        return returnDate;
+    public Date getDueDate() {
+        return dueDate;
     }
 
     public void setReturnDate(Date returnDate) {
         this.returnDate = returnDate;
     }
 
-    public String getStatus() {
-        return status;
+    public Date getReturnDate() {
+        return returnDate;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(BorrowStatus status) {
         this.status = status;
     }
 
-    public double getMaxAmount() {
-        return maxAmount;
+    public BorrowStatus getStatus() {
+        return status;
     }
 
-    public void setMaxAmount(double maxAmount) {
-        this.maxAmount = maxAmount;
+    public void setRenewalCount(int renewalCount) {
+        this.renewalCount = renewalCount;
     }
 
-    public Student getStudent() {
-        return student;
+    public int getRenewalCount() {
+        return renewalCount;
+    }
+
+    public void setFineAmount(double fineAmount) {
+        this.fineAmount = fineAmount;
+    }
+
+    public double getFineAmount() {
+        return fineAmount;
     }
 
     public void setStudent(Student student) {
         this.student = student;
     }
 
-    public Book getBook() {
-        return book;
+    public Student getStudent() {
+        return student;
     }
 
     public void setBook(Book book) {
         this.book = book;
+    }
+
+    public Book getBook() {
+        return book;
     }
 
     public void renewBorrow(Date newDueDate) {
@@ -93,5 +106,12 @@ public class Borrow {
     public boolean isOverdue() {
         Date currentDate = new Date();
         return currentDate.after(dueDate);
+    }
+
+    enum BorrowStatus {
+        ACTIVE,
+        RETURNED,
+        OVERDUE,
+        LOST
     }
 }
