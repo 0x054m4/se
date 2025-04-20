@@ -12,8 +12,7 @@ public class Location {
         this.locationID = locationID;
     }
 
-    public Location(int locationID, int floor, String section, String shelf, float row, ArrayList<Book> book) {
-        this.locationID = locationID;
+    public Location(int floor, String section, String shelf, float row, ArrayList<Book> book) {
         this.floor = floor;
         this.section = section;
         this.shelf = shelf;
