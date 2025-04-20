@@ -13,9 +13,13 @@ public class Book {
         this.ISBN = ISBN;
     }
 
-    public Book(String name, String author, Status status) {
+    public Book(String name, Status status, String category, ArrayList<Author> author, Location location, Borrow borrow) {
         this.name = name;
         this.status = status;
+        this.category = category;
+        this.author = author;
+        this.location = location;
+        this.borrow = borrow;
     }
 
     public void setISBN(int ISBN) {
