@@ -10,7 +10,7 @@ public class Borrow {
     private double fineAmount;
     private Student student;
     private Book book;
-    
+
     public Borrow(int borrowID) {
         this.borrowID = borrowID;
     }
