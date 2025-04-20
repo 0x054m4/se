@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class Book {
     private int ISBN;
     private String name;
-    private Author author;
     private Status status;
     private String category;
+    private ArrayList<Author> author;
     private Location location;
-    private ArrayList<Borrow> borrowList;
+    private Borrow borrow;
 
     public Book(int ISBN) {
         this.ISBN = ISBN;
@@ -34,14 +34,6 @@ public class Book {
         return name;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
     public void setStatus(Status status) {
         this.status = status;
     }
@@ -57,6 +49,14 @@ public class Book {
     public String getCategory() {
         return category;
     }
+    
+    public void setAuthor(ArrayList<Author> author) {
+        this.author = author;
+    }
+
+    public ArrayList<Author> getAuthor() {
+        return author;
+    }
 
     public void setLocation(Location location) {
         this.location = location;
@@ -66,14 +66,13 @@ public class Book {
         return location;
     }
 
-    public void setBorrowList(ArrayList<Borrow> borrowList) {
-        this.borrowList = borrowList;
+    public void setBorrow(Borrow borrow) {
+        this.borrow = borrow;
     }
 
-    public ArrayList<Borrow> getBorrowList() {
-        return borrowList;
+    public Borrow getBorrow() {
+        return borrow;
     }
-
 
     public void addBook() {
 
